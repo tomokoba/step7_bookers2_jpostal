@@ -12,19 +12,19 @@
   </tr>
   <tr>
     <th>follows</th>
-    <th><%= link_to user.follower.count, following_user_path(@user) %></th>
+    <th><%= link_to user.follower.count, following_user_path(user) %></th>
   </tr>
   <tr>
     <th>followers</th>
-    <th><%= link_to user.followed.count, followers_user_path(@user) %></th>
+    <th><%= link_to user.followed.count, followers_user_path(user) %></th>
   </tr>
 </table>
 
 <div>
-  <%= render 'follow_form' %>
+  <%= render 'users/follow_form',user: user %>
 </div>
 
-<% if current_user.id == @user %>
+<% if current_user.id == user.id %>
 <div class='row'>
   <%= link_to '',edit_user_path(user),class: "btn btn-outline-secondary btn-block fas fa-user-cog edit_user_#{user.id}" %>
 </div>

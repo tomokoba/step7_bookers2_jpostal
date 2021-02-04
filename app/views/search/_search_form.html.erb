@@ -1,0 +1,5 @@
+<% if model == 'user' %>
+  <%= render 'search/users_search', datas: datas %>
+<% else model == 'book' %>
+  <%= render 'search/books_search', datas: datas %>
+<% end %>

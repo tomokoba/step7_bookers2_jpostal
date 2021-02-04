@@ -1,0 +1,18 @@
+<h2>Users search for "test"</h2>
+<table class='table table-hover table-inverse'>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>introduction</th>
+    </tr>
+  </thead>
+<tbody>
+  <% datas.each do |data| %>
+    <tr>
+      <td><%= attachment_image_tag(data, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %></td>
+      <td><%= data.name %></td>
+      <td><%= data.introduction %></td>
+    </tr>
+  <% end %>
+</tbody>
