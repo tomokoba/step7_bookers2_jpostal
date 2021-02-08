@@ -1,3 +1,5 @@
 $(".comment").html("<%= j(render 'book_comments/comment', book: @book) %>");
-$(".comment_area").val("");
-<!--↑bookのshow.htmlのコメント入力するフォームにclass名comment_areaと名付けています-->
+$("#book_comment_comment").val("");
+<!--form_withを用いた際、input要素（入力エリア）には自動でモデル名_カラム名というidが付与されます。
+モデル名がbook_comment、カラム名がcommentなので、book_comment_commentというidになります。
+デベロッパーツールで確認すると分かりやすいです。-->
