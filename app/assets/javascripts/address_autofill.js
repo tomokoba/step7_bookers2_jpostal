@@ -1,3 +1,4 @@
+document.addEventListener("turbolinks:load", function() {
 $(function() {
   return $('#user_postcode').jpostal({
     postcode: ['#user_postcode'],
@@ -8,3 +9,4 @@ $(function() {
     },
   });
 });
+})
